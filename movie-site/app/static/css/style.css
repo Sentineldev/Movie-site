@@ -1,0 +1,177 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    color: white;
+    font-family: 'Ubuntu';
+}
+
+body{
+    background-color: rgb(24, 22, 22);
+}
+
+
+
+img:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.box{
+    padding: 1rem 0rem 1.5rem 0rem;
+    width: 100%;
+    background-color: rgb(221, 7, 7);
+    animation-name: load_main;
+    animation-duration: 2.5s;
+}
+h1{
+    font-size: 3.2rem;
+    color: rgb(90, 90, 90);
+    margin: 1rem;
+    margin-bottom: 2rem;
+    text-align: left;
+    font-family: 'Ubuntu';
+    color: white;
+    text-shadow: 0px 0px 2px white;
+}
+.labelbox{
+    text-align: center;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0px 0px 6px black;
+    width: 30rem;
+    margin: auto;
+    border-radius: 0.4rem;
+    padding: 1rem;
+}
+label{
+    display:inline-block;
+    background-color: transparent;
+    margin-top: 1rem;
+}
+input{
+    background-color: transparent;
+    font-size: 1.8rem;
+    margin: 0rem 1rem 0rem 1rem;
+    outline: none;
+    font-family: 'Ubuntu';
+    padding: 1rem;
+    border:3px solid red;
+    box-shadow: 0px 0px 3px red;
+    color: rgb(54, 54, 54);
+    width: 25rem;
+    border: none;
+}
+input::placeholder{
+    color: rgb(104, 102, 102);
+}
+button{
+    border: none;
+    font-family: 'Ubuntu';
+    font-size: 1.8rem;
+    border-radius: 0.4rem;
+    margin: auto;
+    margin-top: 1rem;
+    padding: 1rem;
+    color: white;
+    background-color: rgb(0, 98, 163);
+    box-shadow: 0px 0px 3px black;
+    display: block;
+    width: 200px;
+
+}
+button:hover{
+    background-color: rgba(0, 98, 163,0.9);
+}
+
+.content{
+    transition: 2s;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30rem,auto));
+    grid-row-gap: 5rem;
+    grid-column-gap: 5rem;
+    width: 80%;
+    margin: auto;
+    border: 0px solid rgb(9, 7, 150);
+    border-top: none;
+    padding: 5rem 2rem 5rem 2rem;
+}
+.card{
+    background-color: rgb(253, 253, 253);
+    margin-left: 5rem;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    width: 32rem;
+    animation-name: load_main;
+    animation-duration: 2.5s;
+}
+.card img{
+    border-radius: 0.4rem;
+    height: 60vh;
+    width: 30rem;
+}
+footer{
+    margin: auto;
+    font-size: 2.4rem;
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: rgb(221, 7, 7);
+    animation-name: load_main;
+    animation-duration: 2.5s;
+}
+@media (max-width: 550px){
+    .content{
+        width: 50rem;
+    }
+    .box{
+        width: 50rem;
+        margin: auto;
+    }
+    footer{
+        width: 50rem;
+    }
+}
+
+#error-message{
+    color: red;
+    margin-top: 1rem;
+    font-size: 1.6rem;
+}
+
+@keyframes load_main{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.preloader{
+    width: 100px;
+    height: 100px;
+    border: 10px solid #eee;
+    border-radius: 50%;
+    border-top-color: red;
+    animation-name: girar;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    border-width: 1.5rem;
+    margin: auto;
+    margin-top: 5rem;
+}
+
+@keyframes girar {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
