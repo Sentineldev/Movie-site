@@ -1,0 +1,261 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    color: white;
+    font-family: 'Ubuntu';
+    height: 100%;
+}
+
+body{
+    background-color: rgb(24, 22, 22);
+}
+
+
+
+img:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.box{
+    padding: 1rem 0rem 1.5rem 0rem;
+    width: 100%;
+    background-color: rgb(221, 7, 7);
+    animation-name: load_main;
+    animation-duration: 2.5s;
+}
+.box h1{
+    font-size: 3.2rem;
+    margin: 1rem;
+    margin-bottom: 2rem;
+    text-align: left;
+    font-family: 'Ubuntu';
+    color: white;
+    text-shadow: 0px 0px 2px white;
+}
+.labelbox{
+    background-color: rgb(121, 3, 3);
+    box-shadow: 0px 0px 6px black;
+    width: 50rem;
+    border-radius: 0.4rem;
+    padding: 0.5rem;
+    margin: 0 1rem;
+}
+label{
+    display:inline-block;
+    background-color: transparent;
+    margin-top: 1rem;
+}
+input{
+    background-color: transparent;
+    font-size: 1.8rem;
+    margin: 0rem 1rem 0rem 1rem;
+    outline: none;
+    font-family: 'Ubuntu';
+    padding: 1rem;
+    border:3px solid red;
+    box-shadow: 0px 0px 3px red;
+    color: white;
+    width: 25rem;
+    border: none;
+}
+input::placeholder{
+    color: white;
+}
+input:focus{
+    border: 1px solid red;
+}
+button{
+    border: none;
+    font-family: 'Ubuntu';
+    font-size: 1.8rem;
+    border-radius: 0.4rem;
+    margin: auto;
+    margin-top: 1rem;
+    padding: 1rem;
+    color: rgb(201, 2, 2);
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 2px rgb(255,255,255);
+    width: 200px;
+
+}
+button:hover{
+    background-color: rgba(255, 255, 255,0.8);;
+}
+
+.content{
+    transition: 2s;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30rem,auto));
+    grid-row-gap: 5rem;
+    grid-column-gap: 5rem;
+    width: 80%;
+    margin: auto;
+    border: 0px solid rgb(9, 7, 150);
+    border-top: none;
+    padding: 5rem 2rem 5rem 2rem;
+}
+.card{
+    background-color: rgb(253, 253, 253);
+    margin-left: 5rem;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    width: 32rem;
+    animation-name: load_main;
+    animation-duration: 2.5s;
+}
+.card img{
+    border-radius: 0.4rem;
+    height: 60vh;
+    width: 30rem;
+}
+footer{
+    margin: auto;
+    font-size: 2.4rem;
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: rgb(221, 7, 7);
+    animation-name: load_main;
+    animation-duration: 2.5s;
+}
+@media (max-width: 550px){
+    .content{
+        width: 50rem;
+        margin-left:80px;
+    }
+    .box{
+        width: 60rem;
+    }
+    footer{
+        width: 60rem;
+    }
+}
+
+#error-message{
+    color: white;
+    font-size: 2rem;
+    margin: 1rem 1rem 0rem 1rem;
+}
+
+
+.preloader{
+    width: 100px;
+    height: 100px;
+    border: 10px solid #eee;
+    border-radius: 50%;
+    border-top-color: red;
+    animation-name: girar;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    border-width: 1.5rem;
+    margin: auto;
+    margin-top: 5rem;
+}
+
+
+.model-box{
+    background-color: rgba(5, 5, 5, 0.5);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    display: none;
+    border: none;
+}
+.model-info{
+    position: fixed;
+    background-color: white;
+    width: 50rem;
+    color: black;
+    margin: 0 auto;
+    margin-top: 1rem;
+    left: 0;
+    right: 0;
+    padding: 3rem;
+    border-radius: 0.4rem;
+    box-shadow: 1px 1px 2px white;
+    text-align: center;
+    animation-name: load_model;
+    animation-duration: 1s;
+    z-index: 999;
+}
+.model-info h2{
+    text-align: left;
+    font-size: 3.2rem;
+    margin-bottom: 1rem;
+}
+.model-info p{
+    text-align: left;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: rgb(75, 73, 73);
+}
+
+.model-info .link{
+    text-decoration: none;
+    font-size: 1.6rem;
+    background-color: rgb(139, 139, 139);
+    color: white;
+    width: 30%;
+    border-radius: 0.4rem;
+    padding: 1rem 2rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+#close-model{
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: white;
+    display: block;
+    background-color: rgb(243, 6, 6);
+    padding: 1rem 2rem;
+    width: 30%;
+    border-radius: 0.4rem;
+}
+.model-info .link:hover{
+    text-decoration: underline;
+    background-color: rgba(139, 139, 139,0.8);
+}
+#close-model:hover{
+    text-decoration: underline;
+    background-color:rgba(243, 6, 6,0.8);
+}
+
+
+@keyframes load_main{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes load_model{
+    from{
+        margin-top: 0;
+        opacity: 0;
+    }
+    to{
+        margin-top: 1rem;
+        opacity: 1;
+    }
+}
+
+@keyframes girar {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}

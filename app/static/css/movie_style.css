@@ -1,0 +1,242 @@
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+    color: white;
+    font-family: 'Ubuntu';
+    font-weight: bold;
+}
+
+body{
+    background-color: rgb(24, 22, 22);
+}
+
+header{
+    margin: auto;
+    font-size: 3.2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 2rem 1rem;
+    color: white;
+    text-shadow: 0px 0px 2px white;
+    background-color: rgb(221, 7, 7);
+    animation-name: mostrar;
+    animation-duration: 1s;
+    width: 100%;
+}
+.content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30rem,auto));
+    grid-row-gap: 3rem;
+    grid-column-gap: 3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    margin: auto;
+    transition: 1s;
+    animation-name: mostrar;
+    animation-duration: 1s;
+}
+
+
+.box1{
+    text-align: center;
+}
+
+.box2 h2{
+    font-size: 3.2rem;
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+
+.description{
+    margin-bottom: 2rem;
+    color: rgb(177, 175, 175);
+    background-color: white;
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.5);
+    border-radius: 0.4rem;
+    padding: 1rem;
+    margin: 2rem;
+}
+.description h2{
+    color: rgb(48, 46, 46);
+    text-shadow: 0px 0px 1px rgb(48, 46, 46);
+    letter-spacing: 0.2px;
+}
+.description p{
+    transition: 1s;
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+    width: auto;
+    text-align: left;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30rem,auto));
+    grid-template-rows: repeat(auto-fit,minmax(auto,auto-fit));
+    grid-column-gap: 3rem;
+    grid-row-gap: 3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    margin: auto;
+    padding: 2rem;
+}
+.info-box1,.info-box2,.info-box3{
+    background-color: white;
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.5);
+    border-radius: 0.4rem;
+    color: black;
+    text-align: center;
+    height: auto;
+}
+.info-box1{
+    text-align: left;
+    padding: 1rem 1rem;
+    width: 100%;
+    color: rgb(177, 175, 175);
+}
+.info-box1  h3{
+    font-size: 3.2rem;
+    color: rgb(48, 46, 46);
+    text-shadow: 0px 0px 1px rgb(48, 46, 46);
+    letter-spacing: 0.2px;
+}
+.info-box1 ul{
+    list-style-type: none;
+}
+.info-box1 li{
+    display: inline-block;
+    font-size: 1.8rem;
+    margin: 0.5rem 1rem;
+    width: 100%;
+    transition: 1s;
+}
+.info-box1 li:hover{
+    transition: 0.5s;
+    color: rgb(114, 113, 113);
+}
+
+.info-box2{
+    text-align: left;
+    padding: 1rem 1rem;
+    width: 100%;
+    color: rgb(177, 175, 175);
+}
+.info-box2  h3{
+    font-size: 3.2rem;
+    color: rgb(48, 46, 46);
+    text-shadow: 0px 0px 1px rgb(48, 46, 46);
+    letter-spacing: 0.2px;
+}
+.info-box2 li{
+    display: inline-block;
+    font-size: 1.8rem;
+    margin: 0.5rem 1rem;
+    width: 100%;
+    transition: 1s;
+}
+.info-box2 li:hover,p:hover{
+    transition: 0.5s;
+    color: rgb(114, 113, 113);
+}
+.info-box2 ul{
+    list-style-type: none;
+}
+.info-box2 p{
+    display: inline-block;
+    font-size: 1.8rem;
+    margin: 0.5rem 1rem;
+    width: 100%;
+}
+
+
+.info-box3{
+    text-align: left;
+    padding: 1rem 1rem;
+    width: 100%;
+    color: rgb(177, 175, 175);
+
+}
+.info-box3  h3{
+    font-size: 3.2rem;
+    color: rgb(48, 46, 46);
+    text-shadow: 0px 0px 1px rgb(48, 46, 46);
+    letter-spacing: 0.2px;
+}
+.info-box3 p{
+    display: inline-block;
+    font-size: 1.8rem;
+    margin: 0.5rem 1rem;
+    width: 100%;
+    transition: 1s;
+}
+.info-box3 p:hover{
+    transition: 0.5s;
+    color: rgb(114, 113, 113);
+}
+img{
+    margin-left: 1rem;
+    background-color: white;
+    border-radius: 0.4rem;
+    padding: 0.5rem;
+    margin-top: 2.5rem;
+}
+footer{
+    margin-top: 5rem;
+    padding: 0.5rem;
+    font-size: 2.4rem;
+    text-align: center;
+    color: white;
+    text-shadow: 0px 0px 2px white;
+    background-color: rgb(221, 7, 7);
+    animation-name: mostrar;
+    animation-duration: 1s;
+}
+@media (max-width: 500px){
+    
+    header{
+        width: 50rem;
+    }
+    .content{
+        width: 50rem;
+    }
+    footer{
+        width: 50rem;
+    }
+}
+
+.preloader{
+    width: 100px;
+    height: 100px;
+    border: 10px solid #eee;
+    border-radius: 50%;
+    border-top-color: red;
+    animation-name: girar;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    border-width: 1.5rem;
+    margin: auto;
+    margin-top: 5rem;
+}
+
+@keyframes girar {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+@keyframes mostrar{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}

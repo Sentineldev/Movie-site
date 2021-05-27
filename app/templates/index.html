@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FindYourMovie</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="model-box">
+        <div class="model-info">
+            <h2 class="model-title">Harry Potter And the deadly Hollows</h2>
+            <img src="" alt="" class="model-image">
+            <p class="model-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, cum.</p>
+            <a target="_blank" href="" class="link">Ver mas</a>
+            <a href=""id="close-model">Cerrar</a>
+        </div>
+    </div>
+    <div class="box">
+        <h1>Find your Movie - Find information of your favorite movie in seconds</h1>
+        <div class="labelbox">
+            <label for="input">
+                <input onkeypress="search(event)" type="text" placeholder="Movie title...">
+            </label>
+            <button>Search</button>
+            <p id="error-message"></p>
+        </div>
+    </div>
+    <div class="preloader-box">
+        <div class="preloader"></div>
+    </div>
+   <div class="content">
+   </div>
+   <footer>Find information about your favorite movie!</footer>
+</body>
+<script src="/static/js/index.js"></script>
+</html>
