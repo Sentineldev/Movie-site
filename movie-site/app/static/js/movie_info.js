@@ -2,7 +2,7 @@
 //Seleccion de las etiquetas del html
 const key = '2db38458'
 const movie_id = window.location.pathname.split('/')[1] //tomar el id que se encuentra dentro de la ruta
-const url = 'http://www.omdbapi.com/?i='+movie_id+'&apikey='+key+'&type=movie'+'&plot=full'
+const url = 'https://www.omdbapi.com/?i='+movie_id+'&apikey='+key+'&type=movie'+'&plot=full'
 const page_title = document.querySelector('head title')
 const movie_poster = document.querySelector('img')
 const movie_plot = document.querySelector('p')
